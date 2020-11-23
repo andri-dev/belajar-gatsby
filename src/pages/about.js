@@ -1,8 +1,9 @@
-import React from "react";
+import React from 'react';
+import { injectIntl } from 'gatsby-plugin-intl';
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import dogIllustration from "../images/dog-illustration.svg";
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import dogIllustration from '../images/dog-illustration.svg';
 
 function AboutPage() {
   return (
@@ -35,4 +36,4 @@ function AboutPage() {
   );
 }
 
-export default AboutPage;
+export default injectIntl(AboutPage);

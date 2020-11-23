@@ -1,17 +1,18 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { injectIntl } from 'gatsby-plugin-intl';
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import catAndHumanIllustration from '../images/cat-and-human-illustration.svg';
 
-function IndexPage() {
+function IndexPage({ intl }) {
   return (
     <Layout>
       <SEO
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Home"
       />
-
       <section className="text-center">
         <img
           alt="Cat and human sitting on a couch"
@@ -20,7 +21,8 @@ function IndexPage() {
         />
 
         <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
-          Hey there! Welcome to your first Gatsby site.
+          Hey there! Welcome to your first Gatsby site.{' '}
+          {intl.formatMessage({ id: 'title' })}
         </h2>
 
         <p className="leading-loose">
@@ -40,4 +42,8 @@ function IndexPage() {
   );
 }
 
-export default IndexPage;
+IndexPage.propTypes = {
+  intl: PropTypes.object.isRequired,
+};
+
+export default injectIntl(IndexPage);

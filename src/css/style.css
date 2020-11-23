@@ -1,3 +1,33 @@
+.navbar {
+  background-color: #22305f;
+}
+
+.bg-primary {
+  background-color: #22305f;
+}
+.bg-second {
+  background-color: #2940a4;
+}
+.bg-third {
+  background-color: #3d87e4;
+}
+.bg-four {
+  background-color: #3ec9e9;
+}
+
+.c-primary {
+  color: #22305f;
+}
+.c-second {
+  color: #2940a4;
+}
+.c-third {
+  color: #3d87e4;
+}
+.c-four {
+  color: #3ec9e9;
+}
+
 /*! purgecss start ignore */
 @tailwind base;
 @tailwind components;

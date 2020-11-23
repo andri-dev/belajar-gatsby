@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
+import { injectIntl } from 'gatsby-plugin-intl';
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 function ContactPage() {
   return (
@@ -77,4 +78,4 @@ function ContactPage() {
   );
 }
 
-export default ContactPage;
+export default injectIntl(ContactPage);
