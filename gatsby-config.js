@@ -9,13 +9,14 @@ module.exports = {
     title: `Gatsby GraphQL`,
   },
   plugins: [
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/images/`,
+        path: `${__dirname}/src/images`,
+        name: `images`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
   ],
 }
